@@ -12,11 +12,11 @@ export default function Home() {
 
   return (
     <>
-      {/* Hero with Owner */}
+      {/* Hero with Owner and Boat */}
       <section className="bg-stone-900 text-white py-16">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-3 gap-8 items-center">
+            <div className="md:col-span-2">
               <h1 className="font-serif text-5xl font-bold text-amber-400 mb-6">Czarna Perła</h1>
               <p className="text-lg text-stone-300 leading-relaxed mb-4">
                 Czarna Perła to statek piratów, a piraci – jak wielu z nas – lubią walczyć, zdobywać i gromadzić skarby. 
@@ -27,16 +27,38 @@ export default function Home() {
                 <strong className="text-amber-400">Henry Morgan</strong>, jeden z najsłynniejszych piratów.
               </p>
             </div>
-            <div className="relative w-full aspect-square max-w-md mx-auto">
+            <div className="relative w-full aspect-square max-w-xs mx-auto">
               <Image
-                src="/images/owner.jpg"
-                alt="Właściciel"
+                src="/images/boat.webp"
+                alt="Czarna Perła - statek"
                 fill
-                sizes="(max-width: 768px) 100vw, 400px"
-                className="object-cover rounded-lg"
+                sizes="(max-width: 768px) 100vw, 300px"
+                className="object-contain"
                 priority
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Owner Section */}
+      <section className="py-12 bg-stone-800">
+        <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8">
+          <div className="relative w-48 h-48 rounded-full overflow-hidden flex-shrink-0">
+            <Image
+              src="/images/owner.jpg"
+              alt="Właściciel"
+              fill
+              sizes="200px"
+              className="object-cover"
+            />
+          </div>
+          <div className="text-center md:text-left">
+            <h2 className="font-serif text-2xl font-bold text-amber-400 mb-2">Witaj na pokładzie</h2>
+            <p className="text-stone-300 leading-relaxed">
+              Płyniemy przez morza bezpieczni na pokładzie tej steranej przez historię łajby. 
+              Znajdujemy, gromadzimy porcelanę, szkło i inne ulubione przedmioty.
+            </p>
           </div>
         </div>
       </section>
@@ -69,11 +91,7 @@ export default function Home() {
       {/* Full Story */}
       <section className="py-16 bg-stone-100">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="font-serif text-3xl font-bold mb-6">Witaj na pokładzie</h2>
-          <p className="text-lg text-stone-600 leading-relaxed mb-6">
-            Płyniemy przez morza bezpieczni na pokładzie tej steranej przez historię łajby. 
-            Znajdujemy, gromadzimy porcelanę, szkło i inne ulubione przedmioty.
-          </p>
+          <h2 className="font-serif text-3xl font-bold mb-6">Bezpieczna Przystań</h2>
           <p className="text-lg text-stone-600 leading-relaxed mb-6">
             W końcu jesteśmy w stosunku do piratów bezpieczniejsi. Dzisiejsi zdobywcy to często majtkowie zamustrowani w sieci, 
             siedzący w wygodnej kanapie – choćby na tej stronie. I nie straszne są im fale oceanów, 
