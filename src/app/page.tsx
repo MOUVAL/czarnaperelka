@@ -1,13 +1,11 @@
 import Image from "next/image";
 
 export default function Home() {
+  // Only 3 featured products for faster loading
   const products = [
     { name: "Zestaw herbaciany z porcelany", image: "/images/products/img-08.50.51.jpg", category: "Porcelana" },
-    { name: "Portret kobiecy - olej na płótnie", image: "/images/products/img-08.50.53.jpg", category: "Obrazy" },
-    { name: "Kolekcja biżuterii vintage", image: "/images/products/img-08.50.56.jpg", category: "Biżuteria" },
-    { name: "Kolekcja Wedgwood", image: "/images/products/img-08.50.59.jpg", category: "Porcelana" },
-    { name: "Kolekcja obrazów w ramach", image: "/images/products/img-08.50.58.jpg", category: "Obrazy" },
-    { name: "Monety i guziki kolekcjonerskie", image: "/images/products/img-08.51.01.jpg", category: "Inne" },
+    { name: "Portret kobiecy", image: "/images/products/img-08.50.53.jpg", category: "Obrazy" },
+    { name: "Kolekcja biżuterii", image: "/images/products/img-08.50.56.jpg", category: "Biżuteria" },
   ];
 
   return (
@@ -23,16 +21,17 @@ export default function Home() {
                 Może jesteście wszyscy jak ci piraci, zaokrętowani na tym zgrabnym galionie?
               </p>
               <p className="text-lg text-stone-300 leading-relaxed">
-                Statek o tej nazwie nie jest fikcją, istniał naprawdę, a jego kapitanem był{" "}
+                Statek o tej nazwie nie jest fikcją, istniał naprawdę, a jego kapitanem byl{" "}
                 <strong className="text-amber-400">Henry Morgan</strong>, jeden z najsłynniejszych piratów.
               </p>
             </div>
-            <div className="aspect-square relative rounded-lg overflow-hidden">
+            <div className="relative w-full aspect-square max-w-md mx-auto">
               <Image
                 src="/images/owner.jpg"
-                alt="Właściciel Czarnej Perły"
+                alt="Właściciel"
                 fill
-                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 400px"
+                className="object-cover rounded-lg"
                 priority
               />
             </div>
@@ -40,19 +39,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Products Grid */}
+      {/* Products Grid - Only 3 */}
       <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-6">
           <h2 className="font-serif text-3xl font-bold text-center mb-12">Nasze Skarby</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {products.map((product, i) => (
-              <div key={i} className="group cursor-pointer">
-                <div className="aspect-square relative rounded-lg overflow-hidden bg-stone-100 mb-4">
+              <div key={i} className="group">
+                <div className="relative w-full aspect-square rounded-lg overflow-hidden bg-stone-100 mb-4">
                   <Image
                     src={product.image}
                     alt={product.name}
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
                 </div>
                 <span className="text-sm text-amber-600 font-medium">{product.category}</span>
