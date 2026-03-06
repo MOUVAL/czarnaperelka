@@ -17,7 +17,7 @@ export function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="font-serif text-2xl text-accent-gold hover:text-accent-bronze transition-colors">
-            Czarna Perelka
+            Czarna Perła
           </Link>
 
           {/* Desktop Navigation */}

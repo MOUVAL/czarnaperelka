@@ -14,8 +14,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Czarna Perelka - Antyki i Kolekcje",
-  description: "Odkryj wyjątkowe antyki, starocje i przedmioty kolekcjonerskie w Czarnej Perelce. Polski sklep z antykami.",
+  title: "Czarna Perła - Antyki i Kolekcje",
+  description: "Odkryj wyjątkowe antyki, starocje i przedmioty kolekcjonerskie w Czarnej Perle. Polski sklep z antykami.",
   keywords: ["antyki", "starocje", "kolekcje", "antiquities", "vintage", "polska"],
 };
 

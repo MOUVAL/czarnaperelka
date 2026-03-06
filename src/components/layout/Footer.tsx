@@ -8,7 +8,7 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <h3 className="font-serif text-2xl text-accent-gold mb-4">
-              Czarna Perelka
+              Czarna Perła
             </h3>
             <p className="text-stone-400 mb-4 max-w-md">
               Odkryj wyjątkowe antyki i przedmioty kolekcjonerskie. Każdy przedmiot w naszej kolekcji 
@@ -55,7 +55,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-stone-800 mt-8 pt-8 text-center text-stone-500 text-sm">
-          <p>© {new Date().getFullYear()} Czarna Perelka. Wszystkie prawa zastrzeżone.</p>
+          <p>© {new Date().getFullYear()} Czarna Perła. Wszystkie prawa zastrzeżone.</p>
         </div>
       </div>
     </footer>
