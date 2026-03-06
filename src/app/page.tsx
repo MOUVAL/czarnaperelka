@@ -3,11 +3,35 @@ import Image from "next/image";
 export default function Home() {
   const products = [
     { name: "Zestaw herbaciany z porcelany", image: "/images/products/img-08.50.51.jpg", category: "Porcelana" },
+    { name: "Porcelanowa zastawa", image: "/images/products/img-08.50.51-1.jpg", category: "Porcelana" },
+    { name: "Zestaw obiadów z porcelany", image: "/images/products/img-08.50.51-2.jpg", category: "Porcelana" },
+    { name: "Porcelana ozdobna", image: "/images/products/img-08.50.52.jpg", category: "Porcelana" },
     { name: "Portret kobiecy - olej na płótnie", image: "/images/products/img-08.50.53.jpg", category: "Obrazy" },
-    { name: "Kolekcja biżuterii vintage", image: "/images/products/img-08.50.56.jpg", category: "Biżuteria" },
-    { name: "Kolekcja Wedgwood", image: "/images/products/img-08.50.59.jpg", category: "Porcelana" },
-    { name: "Kolekcja obrazów w ramach", image: "/images/products/img-08.50.58.jpg", category: "Obrazy" },
-    { name: "Monety i guziki kolekcjonerskie", image: "/images/products/img-08.51.01.jpg", category: "Inne" },
+    { name: "Obraz w ramie", image: "/images/products/img-08.50.53-1.jpg", category: "Obrazy" },
+    { name: "Biżuteria vintage", image: "/images/products/img-08.50.54.jpg", category: "Biżuteria" },
+    { name: "Kolekcja broszek", image: "/images/products/img-08.50.54-1.jpg", category: "Biżuteria" },
+    { name: "Naszyjniki antyczne", image: "/images/products/img-08.50.54-2.jpg", category: "Biżuteria" },
+    { name: "Pierścionki vintage", image: "/images/products/img-08.50.54-3.jpg", category: "Biżuteria" },
+    { name: "Kolczyki antyczne", image: "/images/products/img-08.50.54-4.jpg", category: "Biżuteria" },
+    { name: "Zegarki kieszonkowe", image: "/images/products/img-08.50.54-5.jpg", category: "Biżuteria" },
+    { name: "Bransoletki vintage", image: "/images/products/img-08.50.54-6.jpg", category: "Biżuteria" },
+    { name: "Srebra stołowe", image: "/images/products/img-08.50.55.jpg", category: "Srebra" },
+    { name: "Srebrne sztućce", image: "/images/products/img-08.50.55-1.jpg", category: "Srebra" },
+    { name: "Kolekcja biżuterii", image: "/images/products/img-08.50.56.jpg", category: "Biżuteria" },
+    { name: "Biżuteria ozdobna", image: "/images/products/img-08.50.56-1.jpg", category: "Biżuteria" },
+    { name: "Obraz olejny", image: "/images/products/img-08.50.57.jpg", category: "Obrazy" },
+    { name: "Malarstwo klasyczne", image: "/images/products/img-08.50.57-1.jpg", category: "Obrazy" },
+    { name: "Portret historyczny", image: "/images/products/img-08.50.57-2.jpg", category: "Obrazy" },
+    { name: "Obraz w złotej ramie", image: "/images/products/img-08.50.57-3.jpg", category: "Obrazy" },
+    { name: "Kolekcja obrazów", image: "/images/products/img-08.50.58.jpg", category: "Obrazy" },
+    { name: "Porcelana Wedgwood", image: "/images/products/img-08.50.59.jpg", category: "Porcelana" },
+    { name: "Waza Wedgwood", image: "/images/products/img-08.50.59-1.jpg", category: "Porcelana" },
+    { name: "Porcelana angielska", image: "/images/products/img-08.50.59-2.jpg", category: "Porcelana" },
+    { name: "Zestaw Wedgwood", image: "/images/products/img-08.50.59-3.jpg", category: "Porcelana" },
+    { name: "Monety kolekcjonerskie", image: "/images/products/img-08.51.00.jpg", category: "Inne" },
+    { name: "Guziki antyczne", image: "/images/products/img-08.51.00-1.jpg", category: "Inne" },
+    { name: "Monety i medale", image: "/images/products/img-08.51.01.jpg", category: "Inne" },
+    { name: "Kolekcja numizmatyczna", image: "/images/products/img-08.51.01-1.jpg", category: "Inne" },
   ];
 
   return (
@@ -63,25 +87,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Products Grid - All 6 */}
+      {/* Products Grid - ALL 30 */}
       <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-serif text-3xl font-bold text-center mb-12">Nasze Skarby</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
             {products.map((product, i) => (
               <div key={i} className="group">
-                <div className="relative w-full aspect-square rounded-lg overflow-hidden bg-stone-100 mb-4">
+                <div className="relative w-full aspect-square rounded-lg overflow-hidden bg-stone-100 mb-2">
                   <Image
                     src={product.image}
                     alt={product.name}
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                   />
                 </div>
-                <span className="text-sm text-amber-600 font-medium">{product.category}</span>
-                <h3 className="font-serif text-lg font-semibold">{product.name}</h3>
+                <span className="text-xs text-amber-600 font-medium">{product.category}</span>
+                <h3 className="font-serif text-sm font-semibold leading-tight">{product.name}</h3>
               </div>
             ))}
           </div>
