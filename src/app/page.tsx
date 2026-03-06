@@ -1,11 +1,13 @@
 import Image from "next/image";
 
 export default function Home() {
-  // Only 3 featured products for faster loading
   const products = [
     { name: "Zestaw herbaciany z porcelany", image: "/images/products/img-08.50.51.jpg", category: "Porcelana" },
-    { name: "Portret kobiecy", image: "/images/products/img-08.50.53.jpg", category: "Obrazy" },
-    { name: "Kolekcja biżuterii", image: "/images/products/img-08.50.56.jpg", category: "Biżuteria" },
+    { name: "Portret kobiecy - olej na płótnie", image: "/images/products/img-08.50.53.jpg", category: "Obrazy" },
+    { name: "Kolekcja biżuterii vintage", image: "/images/products/img-08.50.56.jpg", category: "Biżuteria" },
+    { name: "Kolekcja Wedgwood", image: "/images/products/img-08.50.59.jpg", category: "Porcelana" },
+    { name: "Kolekcja obrazów w ramach", image: "/images/products/img-08.50.58.jpg", category: "Obrazy" },
+    { name: "Monety i guziki kolekcjonerskie", image: "/images/products/img-08.51.01.jpg", category: "Inne" },
   ];
 
   return (
@@ -39,11 +41,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Products Grid - Only 3 */}
+      {/* Products Grid - All 6 */}
       <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
           <h2 className="font-serif text-3xl font-bold text-center mb-12">Nasze Skarby</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product, i) => (
               <div key={i} className="group">
                 <div className="relative w-full aspect-square rounded-lg overflow-hidden bg-stone-100 mb-4">
@@ -51,7 +53,7 @@ export default function Home() {
                     src={product.image}
                     alt={product.name}
                     fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                   />
