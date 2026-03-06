@@ -67,8 +67,8 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="font-serif text-3xl font-bold mb-4 text-amber-400">Kontakt</h2>
           <p className="text-stone-300 mb-6">Masz pytania o nasze skarby? Napisz do nas.</p>
-          <a href="mailto:info@czarnaperla.pl" className="text-amber-400 text-xl hover:text-amber-300">
-            info@czarnaperla.pl
+          <a href="mailto:info@czarnaperelka.com" className="text-amber-400 text-xl hover:text-amber-300">
+            info@czarnaperelka.com
           </a>
         </div>
       </section>
