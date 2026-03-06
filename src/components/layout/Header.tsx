@@ -7,7 +7,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="bg-stone-900 text-white sticky top-0 z-50">
+    <header className="text-white sticky top-0 z-50 bg-stone-900/80 backdrop-blur-md">
       <nav className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
         <Link href="/" className="font-serif text-xl text-amber-400">
           Czarna Perła
@@ -25,7 +25,7 @@ export function Header() {
       </nav>
 
       {open && (
-        <div className="md:hidden bg-stone-800 px-6 py-4 space-y-3">
+        <div className="md:hidden bg-stone-900/80 backdrop-blur-md px-6 py-4 space-y-3">
           <Link href="/" className="block hover:text-amber-400" onClick={() => setOpen(false)}>Strona główna</Link>
           <Link href="/o-nas" className="block hover:text-amber-400" onClick={() => setOpen(false)}>O nas</Link>
           <Link href="/kontakt" className="block hover:text-amber-400" onClick={() => setOpen(false)}>Kontakt</Link>
