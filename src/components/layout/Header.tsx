@@ -4,69 +4,33 @@ import Link from "next/link";
 import { useState } from "react";
 
 export function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const navigation = [
-    { name: "Kolekcja", href: "/kolekcja" },
-    { name: "Aktualności", href: "/aktualnosci" },
-    { name: "O Nas", href: "/o-nas" },
-    { name: "Kontakt", href: "/kontakt" },
-  ];
+  const [open, setOpen] = useState(false);
 
   return (
     <header className="bg-stone-900 text-white sticky top-0 z-50">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link href="/" className="font-serif text-2xl text-accent-gold hover:text-accent-bronze transition-colors">
-            Czarna Perła
-          </Link>
+      <nav className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
+        <Link href="/" className="font-serif text-xl text-amber-400">
+          Czarna Perła
+        </Link>
+        
+        <button className="md:hidden" onClick={() => setOpen(!open)}>
+          <span className="text-2xl">{open ? "✕" : "☰"}</span>
+        </button>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-stone-300 hover:text-accent-gold transition-colors text-sm font-medium"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-
-          {/* Mobile menu button */}
-          <button
-            type="button"
-            className="md:hidden text-stone-300 hover:text-white"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              {mobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
+        <div className="hidden md:flex gap-8 text-sm">
+          <Link href="/" className="hover:text-amber-400">Strona główna</Link>
+          <Link href="/o-nas" className="hover:text-amber-400">O nas</Link>
+          <Link href="/kontakt" className="hover:text-amber-400">Kontakt</Link>
         </div>
-
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div className="md:hidden pb-4">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="block py-2 text-stone-300 hover:text-accent-gold transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-        )}
       </nav>
+
+      {open && (
+        <div className="md:hidden bg-stone-800 px-6 py-4 space-y-3">
+          <Link href="/" className="block hover:text-amber-400" onClick={() => setOpen(false)}>Strona główna</Link>
+          <Link href="/o-nas" className="block hover:text-amber-400" onClick={() => setOpen(false)}>O nas</Link>
+          <Link href="/kontakt" className="block hover:text-amber-400" onClick={() => setOpen(false)}>Kontakt</Link>
+        </div>
+      )}
     </header>
   );
 }
