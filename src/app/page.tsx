@@ -36,50 +36,49 @@ export default function Home() {
 
   return (
     <>
-      {/* Hero with Owner and Boat */}
-      <section className="bg-stone-900 text-white py-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8 items-center">
-            <div className="md:col-span-2">
-              <h1 className="font-serif text-5xl font-bold text-amber-400 mb-6">Czarna Perła</h1>
-              <p className="text-lg text-stone-300 leading-relaxed mb-4">
-                Czarna Perła to statek piratów, a piraci – jak wielu z nas – lubią walczyć, zdobywać i gromadzić skarby. 
-                Może jesteście wszyscy jak ci piraci, zaokrętowani na tym zgrabnym galionie?
-              </p>
-              <p className="text-lg text-stone-300 leading-relaxed">
-                Statek o tej nazwie nie jest fikcją, istniał naprawdę, a jego kapitanem byl{" "}
-                <strong className="text-amber-400">Henry Morgan</strong>, jeden z najsłynniejszych piratów.
-              </p>
-            </div>
-            <div className="relative w-full aspect-square max-w-xs mx-auto">
-              <Image
-                src="/images/boat.webp"
-                alt="Czarna Perła - statek"
-                fill
-                sizes="(max-width: 768px) 100vw, 300px"
-                className="object-contain"
-                priority
-              />
-            </div>
+      {/* Full Hero with Boat Image */}
+      <section className="relative h-[80vh] min-h-[600px]">
+        <Image
+          src="/images/boat.webp"
+          alt="Czarna Perła - statek"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-stone-900/70 via-stone-900/50 to-stone-900/90" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center px-6 max-w-4xl">
+            <h1 className="font-serif text-6xl md:text-7xl font-bold text-amber-400 mb-8 drop-shadow-2xl">
+              Czarna Perła
+            </h1>
+            <p className="text-xl md:text-2xl text-white leading-relaxed mb-6 drop-shadow-lg">
+              Czarna Perła to statek piratów, a piraci – jak wielu z nas – lubią walczyć, zdobywać i gromadzić skarby. 
+              Może jesteście wszyscy jak ci piraci, zaokrętowani na tym zgrabnym galionie?
+            </p>
+            <p className="text-lg md:text-xl text-stone-200 leading-relaxed drop-shadow-lg">
+              Statek o tej nazwie nie jest fikcją, istniał naprawdę, a jego kapitanem byl{" "}
+              <strong className="text-amber-400">Henry Morgan</strong>, jeden z najsłynniejszych piratów.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Owner Section */}
-      <section className="py-12 bg-stone-800">
-        <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8">
-          <div className="relative w-48 h-48 rounded-full overflow-hidden flex-shrink-0">
+      <section className="py-16 bg-stone-900">
+        <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+          <div className="relative w-56 h-56 rounded-full overflow-hidden flex-shrink-0 ring-4 ring-amber-400">
             <Image
               src="/images/owner.jpg"
               alt="Właściciel"
               fill
-              sizes="200px"
+              sizes="224px"
               className="object-cover"
             />
           </div>
           <div className="text-center md:text-left">
-            <h2 className="font-serif text-2xl font-bold text-amber-400 mb-2">Witaj na pokładzie</h2>
-            <p className="text-stone-300 leading-relaxed">
+            <h2 className="font-serif text-3xl font-bold text-amber-400 mb-4">Witaj na pokładzie</h2>
+            <p className="text-lg text-stone-300 leading-relaxed">
               Płyniemy przez morza bezpieczni na pokładzie tej steranej przez historię łajby. 
               Znajdujemy, gromadzimy porcelanę, szkło i inne ulubione przedmioty.
             </p>
