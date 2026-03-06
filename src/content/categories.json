@@ -1,0 +1,44 @@
+[
+  {
+    "id": "meble",
+    "name": "Meble",
+    "description": "Antyczne meble z różnych epok",
+    "image": "/placeholder-furniture.jpg",
+    "subcategories": ["Stoły", "Krzesła", "Szafy", "Komody", "Łóżka"]
+  },
+  {
+    "id": "porcelana",
+    "name": "Porcelana",
+    "description": "Porcelana i ceramika artystyczna",
+    "image": "/placeholder-porcelain.jpg",
+    "subcategories": ["Wazy", "Serwisy", "Figurki", "Talerze"]
+  },
+  {
+    "id": "srebra",
+    "name": "Srebra",
+    "description": "Srebra i wyroby z metali szlachetnych",
+    "image": "/placeholder-silver.jpg",
+    "subcategories": ["Zastawy", "Biżuteria", "Świeczniki", "Puchary"]
+  },
+  {
+    "id": "obrazy",
+    "name": "Obrazy",
+    "description": "Malarstwo i grafika",
+    "image": "/placeholder-paintings.jpg",
+    "subcategories": ["Olejne", "Akwarele", "Grafiki", "Ikony"]
+  },
+  {
+    "id": "zegary",
+    "name": "Zegary",
+    "description": "Antyczne zegary i czasomierze",
+    "image": "/placeholder-clocks.jpg",
+    "subcategories": ["Zegary ścienne", "Zegary kominkowe", "Zegarki"]
+  },
+  {
+    "id": "inne",
+    "name": "Inne",
+    "description": "Różne przedmioty kolekcjonerskie",
+    "image": "/placeholder-other.jpg",
+    "subcategories": ["Lustra", "Dywany", "Książki", "Mapy"]
+  }
+]
