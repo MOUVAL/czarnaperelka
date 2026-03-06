@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Home() {
   const products = [
@@ -13,14 +12,31 @@ export default function Home() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="bg-stone-900 text-white py-20">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h1 className="font-serif text-5xl font-bold text-amber-400 mb-6">Czarna Perła</h1>
-          <p className="text-xl text-stone-300 leading-relaxed">
-            Czarna Perła to statek piratów, a piraci – jak wielu z nas – lubią zdobywać i gromadzić skarby.
-            Statek o tej nazwie istniał naprawdę, a jego kapitanem był Henry Morgan, jeden z najsłynniejszych piratów.
-          </p>
+      {/* Hero with Owner */}
+      <section className="bg-stone-900 text-white py-16">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="font-serif text-5xl font-bold text-amber-400 mb-6">Czarna Perła</h1>
+              <p className="text-lg text-stone-300 leading-relaxed mb-4">
+                Czarna Perła to statek piratów, a piraci – jak wielu z nas – lubią walczyć, zdobywać i gromadzić skarby. 
+                Może jesteście wszyscy jak ci piraci, zaokrętowani na tym zgrabnym galionie?
+              </p>
+              <p className="text-lg text-stone-300 leading-relaxed">
+                Statek o tej nazwie nie jest fikcją, istniał naprawdę, a jego kapitanem był{" "}
+                <strong className="text-amber-400">Henry Morgan</strong>, jeden z najsłynniejszych piratów.
+              </p>
+            </div>
+            <div className="aspect-square relative rounded-lg overflow-hidden">
+              <Image
+                src="/images/owner.jpg"
+                alt="Właściciel Czarnej Perły"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -47,17 +63,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Story */}
+      {/* Full Story */}
       <section className="py-16 bg-stone-100">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="font-serif text-3xl font-bold mb-6">Historia</h2>
+          <h2 className="font-serif text-3xl font-bold mb-6">Witaj na pokładzie</h2>
           <p className="text-lg text-stone-600 leading-relaxed mb-6">
             Płyniemy przez morza bezpieczni na pokładzie tej steranej przez historię łajby. 
             Znajdujemy, gromadzimy porcelanę, szkło i inne ulubione przedmioty.
           </p>
-          <p className="text-lg text-stone-600 leading-relaxed">
-            W końcu jesteśmy w stosunku do piratów bezpieczniejsi. Dzisiejsi zdobywcy siedzą w wygodnej kanapie 
-            i nie straszne są im fale oceanów. Tylko rozwagi, wyobraźni i szczęścia w łowach pozostaje życzyć!
+          <p className="text-lg text-stone-600 leading-relaxed mb-6">
+            W końcu jesteśmy w stosunku do piratów bezpieczniejsi. Dzisiejsi zdobywcy to często majtkowie zamustrowani w sieci, 
+            siedzący w wygodnej kanapie – choćby na tej stronie. I nie straszne są im fale oceanów, 
+            a doskwira zaś może czasem brak zasięgu, gotówki, cena...
+          </p>
+          <p className="text-lg text-stone-600 leading-relaxed mb-6">
+            Tutaj znajdziecie: skarby, łupy, statki, jedzenie, napoje, pieniądze i zabawę. 
+            To bezpieczna przystań dla piratów.
+          </p>
+          <p className="text-xl font-semibold text-stone-900">
+            Tylko rozwagi, wyobraźni i szczęścia w łowach pozostaje życzyć!
           </p>
         </div>
       </section>
