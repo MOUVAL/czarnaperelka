@@ -7,7 +7,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="text-white sticky top-0 z-50 bg-stone-900/80 backdrop-blur-md">
+    <header className="text-white fixed top-0 left-0 right-0 z-50 bg-stone-900/80 backdrop-blur-md">
       <nav className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
         <Link href="/" className="font-serif text-xl text-amber-400">
           Czarna Perła
