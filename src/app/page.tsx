@@ -1,12 +1,7 @@
-"use client";
-
 import Image from "next/image";
-import { useState } from "react";
 
 export default function Home() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
-  const products = [
+const products = [
     { name: "Zestaw herbaciany z porcelany", image: "/images/products/img-08.50.51.webp", category: "Porcelana" },
     { name: "Porcelanowa zastawa", image: "/images/products/img-08.50.51-1.webp", category: "Porcelana" },
     { name: "Zestaw obiadów z porcelany", image: "/images/products/img-08.50.51-2.webp", category: "Porcelana" },
@@ -110,7 +105,7 @@ export default function Home() {
           <h2 className="font-serif text-3xl font-bold text-center mb-12">Nasze Skarby</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
             {products.map((product, i) => (
-              <div key={i} className="group cursor-pointer" onClick={() => setSelectedImage(product.image)}>
+              <div key={i} className="group">
                 <div className="relative w-full aspect-square rounded-lg overflow-hidden bg-stone-100 mb-2">
                   <Image
                     src={product.image}
@@ -158,30 +153,6 @@ export default function Home() {
           </a>
         </div>
       </section>
-
-      {/* Lightbox Modal */}
-      {selectedImage && (
-        <div 
-          className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          <button 
-            className="absolute top-4 right-4 text-white text-4xl hover:text-amber-400"
-            onClick={() => setSelectedImage(null)}
-          >
-            ✕
-          </button>
-          <div className="relative w-full h-full max-w-6xl max-h-[90vh]">
-            <Image
-              src={selectedImage}
-              alt="Product"
-              fill
-              className="object-contain"
-              sizes="100vw"
-            />
-          </div>
-        </div>
-      )}
     </>
   );
 }
