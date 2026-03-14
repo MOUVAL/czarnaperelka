@@ -1,19 +1,30 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 100);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header 
-      className="text-white fixed top-0 left-0 right-0 z-50 shadow-2xl"
+      className={`text-white fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled ? "shadow-2xl opacity-100" : "opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto"
+      }`}
       style={{
         backgroundImage: 'url(/images/menu.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        boxShadow: '0 8px 30px rgba(0,0,0,0.5)'
+        boxShadow: scrolled ? '0 8px 30px rgba(0,0,0,0.5)' : 'none'
       }}
     >
       <nav className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
