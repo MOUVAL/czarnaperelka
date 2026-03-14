@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <>
       {/* Full Hero with Boat Image - Full height, centered */}
-      <section className="relative w-full h-screen mt-14">
+      <section className="relative w-screen h-screen -mx-8 md:mx-0 md:w-full">
         <Image
           src="/images/boat.webp"
           alt="Czarna Perła - statek"
@@ -52,20 +52,22 @@ export default function Home() {
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-stone-900/50 via-transparent to-stone-900/70" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center px-6 max-w-4xl">
-            <h1 className="font-serif text-6xl md:text-7xl font-bold text-amber-400 mb-8 drop-shadow-2xl">
-              Czarna Perła
-            </h1>
-            <p className="text-xl md:text-2xl text-white leading-relaxed mb-6 drop-shadow-lg">
-              Czarna Perła to statek piratów, a piraci – jak wielu z nas – lubią walczyć, zdobywać i gromadzić skarby. 
-              Może jesteście wszyscy jak ci piraci, zaokrętowani na tym zgrabnym galionie?
-            </p>
-            <p className="text-lg md:text-xl text-stone-200 leading-relaxed drop-shadow-lg">
-              Statek o tej nazwie nie jest fikcją, istniał naprawdę, a jego kapitanem byl{" "}
-              <strong className="text-amber-400">Henry Morgan</strong>, jeden z najsłynniejszych piratów.
-            </p>
-          </div>
+      </section>
+
+      {/* Hero Text - Below image on mobile, overlay on desktop */}
+      <section className="bg-stone-900 py-12 md:absolute md:inset-0 md:flex md:items-center md:justify-center md:bg-transparent md:pt-14">
+        <div className="text-center px-6 max-w-4xl">
+          <h1 className="font-serif text-5xl md:text-7xl font-bold text-amber-400 mb-6 md:mb-8 drop-shadow-2xl">
+            Czarna Perła
+          </h1>
+          <p className="text-lg md:text-2xl text-white leading-relaxed mb-4 md:mb-6 drop-shadow-lg">
+            Czarna Perła to statek piratów, a piraci – jak wielu z nas – lubią walczyć, zdobywać i gromadzić skarby. 
+            Może jesteście wszyscy jak ci piraci, zaokrętowani na tym zgrabnym galionie?
+          </p>
+          <p className="text-base md:text-xl text-stone-200 leading-relaxed drop-shadow-lg">
+            Statek o tej nazwie nie jest fikcją, istniał naprawdę, a jego kapitanem byl{" "}
+            <strong className="text-amber-400">Henry Morgan</strong>, jeden z najsłynniejszych piratów.
+          </p>
         </div>
       </section>
 
