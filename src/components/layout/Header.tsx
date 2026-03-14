@@ -17,7 +17,7 @@ export function Header() {
       }}
     >
       <nav className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
-        <Link href="/" className="font-serif text-xl text-amber-400 drop-shadow-md">
+        <Link href="/" className="font-serif text-xl px-4 py-2 bg-stone-800/80 rounded border border-amber-600/50 hover:bg-amber-700/80 hover:border-amber-400 transition-colors drop-shadow-md text-amber-400">
           Czarna Perła
         </Link>
         
