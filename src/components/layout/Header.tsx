@@ -10,10 +10,9 @@ export function Header() {
     <header 
       className="text-white fixed top-0 left-0 right-0 z-50"
       style={{
-        backgroundImage: 'url(/images/strip.jpg)',
-        backgroundSize: 'auto 100%',
-        backgroundRepeat: 'repeat-x',
-        backgroundPosition: 'top'
+        backgroundImage: 'url(/images/menu.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
       }}
     >
       <nav className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between bg-stone-900/60">
