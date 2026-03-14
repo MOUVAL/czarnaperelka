@@ -74,7 +74,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
           <div className="relative w-56 h-56 rounded-full overflow-hidden flex-shrink-0 ring-4 ring-amber-400">
             <Image
-              src="/images/owner.jpg"
+              src="/images/owner.webp"
               alt="Właściciel"
               fill
               sizes="224px"

@@ -10,7 +10,7 @@ export function Header() {
     <header 
       className="text-white fixed top-0 left-0 right-0 z-50 shadow-2xl"
       style={{
-        backgroundImage: 'url(/images/menu.jpg)',
+        backgroundImage: 'url(/images/menu.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         boxShadow: '0 8px 30px rgba(0,0,0,0.5)'

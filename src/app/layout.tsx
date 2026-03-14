@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Czarna Perła - Antyki i Kolekcje",
   description: "Antyki i kolekcje z pasją. Porcelana, obrazy, biżuteria.",
   icons: {
-    icon: "/images/owner.jpg",
+    icon: "/images/owner.webp",
   },
 };
 
@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div 
             className="w-16 md:w-24 flex-shrink-0 sticky top-0 h-screen"
             style={{
-              backgroundImage: 'url(/images/strip.jpg)',
+              backgroundImage: 'url(/images/strip.webp)',
               backgroundSize: '100% auto',
               backgroundRepeat: 'repeat-y',
               backgroundPosition: 'top'
@@ -45,7 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div 
             className="w-16 md:w-24 flex-shrink-0 sticky top-0 h-screen"
             style={{
-              backgroundImage: 'url(/images/strip.jpg)',
+              backgroundImage: 'url(/images/strip.webp)',
               backgroundSize: '100% auto',
               backgroundRepeat: 'repeat-y',
               backgroundPosition: 'top',
