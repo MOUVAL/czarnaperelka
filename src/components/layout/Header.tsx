@@ -16,27 +16,27 @@ export function Header() {
         boxShadow: '0 8px 30px rgba(0,0,0,0.5)'
       }}
     >
-      <nav className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between bg-stone-900/60">
-        <Link href="/" className="font-serif text-xl text-amber-400">
+      <nav className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
+        <Link href="/" className="font-serif text-xl text-amber-400 drop-shadow-md">
           Czarna Perła
         </Link>
         
-        <button className="md:hidden" onClick={() => setOpen(!open)}>
-          <span className="text-2xl">{open ? "✕" : "☰"}</span>
+        <button className="md:hidden bg-stone-800/80 px-3 py-1 rounded border border-amber-600/50" onClick={() => setOpen(!open)}>
+          <span className="text-lg">{open ? "✕" : "☰"}</span>
         </button>
 
-        <div className="hidden md:flex gap-8 text-sm">
-          <Link href="/" className="hover:text-amber-400">Strona główna</Link>
-          <Link href="/o-nas" className="hover:text-amber-400">O nas</Link>
-          <Link href="/kontakt" className="hover:text-amber-400">Kontakt</Link>
+        <div className="hidden md:flex gap-4">
+          <Link href="/" className="px-4 py-2 bg-stone-800/80 rounded border border-amber-600/50 hover:bg-amber-700/80 hover:border-amber-400 transition-colors drop-shadow-md">Strona główna</Link>
+          <Link href="/o-nas" className="px-4 py-2 bg-stone-800/80 rounded border border-amber-600/50 hover:bg-amber-700/80 hover:border-amber-400 transition-colors drop-shadow-md">O nas</Link>
+          <Link href="/kontakt" className="px-4 py-2 bg-stone-800/80 rounded border border-amber-600/50 hover:bg-amber-700/80 hover:border-amber-400 transition-colors drop-shadow-md">Kontakt</Link>
         </div>
       </nav>
 
       {open && (
-        <div className="md:hidden bg-stone-900/90 px-6 py-4 space-y-3">
-          <Link href="/" className="block hover:text-amber-400" onClick={() => setOpen(false)}>Strona główna</Link>
-          <Link href="/o-nas" className="block hover:text-amber-400" onClick={() => setOpen(false)}>O nas</Link>
-          <Link href="/kontakt" className="block hover:text-amber-400" onClick={() => setOpen(false)}>Kontakt</Link>
+        <div className="md:hidden px-6 py-4 space-y-3">
+          <Link href="/" className="block px-4 py-2 bg-stone-800/90 rounded border border-amber-600/50 hover:bg-amber-700/80 text-center" onClick={() => setOpen(false)}>Strona główna</Link>
+          <Link href="/o-nas" className="block px-4 py-2 bg-stone-800/90 rounded border border-amber-600/50 hover:bg-amber-700/80 text-center" onClick={() => setOpen(false)}>O nas</Link>
+          <Link href="/kontakt" className="block px-4 py-2 bg-stone-800/90 rounded border border-amber-600/50 hover:bg-amber-700/80 text-center" onClick={() => setOpen(false)}>Kontakt</Link>
         </div>
       )}
     </header>
