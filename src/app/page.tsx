@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <>
       {/* Full Hero with Boat Image - Full height, centered */}
-      <section className="relative w-screen h-[120vw] max-h-[90vh] -mx-8 md:mx-0 md:w-full md:h-screen">
+      <section className="relative w-full h-[120vw] max-h-[90vh] md:h-screen">
         {/* Mobile cover image */}
         <Image
           src="/images/cover_mobile.jpeg"

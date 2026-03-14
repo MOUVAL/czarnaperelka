@@ -3,7 +3,6 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 const playfair = Playfair_Display({ subsets: ["latin"] });
@@ -20,19 +19,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="pl" className={`${inter.className} ${playfair.className}`}>
       <body className="bg-stone-50 text-stone-900">
-        <div className="flex">
-          {/* Left decorative strip - scrolls with page */}
+        {/* Desktop: Side strips as flex items */}
+        <div className="hidden md:flex min-h-screen">
+          {/* Left decorative strip */}
           <div 
-            className="w-8 md:w-24 flex-shrink-0 md:hidden"
-            style={{
-              backgroundImage: 'url(/images/strip_mobile.jpg)',
-              backgroundSize: '100% auto',
-              backgroundRepeat: 'repeat-y',
-              backgroundPosition: 'top'
-            }}
-          />
-          <div 
-            className="w-8 md:w-24 flex-shrink-0 hidden md:block"
+            className="w-24 flex-shrink-0"
             style={{
               backgroundImage: 'url(/images/strip.webp)',
               backgroundSize: '100% auto',
@@ -42,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           />
           
           {/* Main content */}
-          <div className="flex-1 flex flex-col min-h-screen">
+          <div className="flex-1 flex flex-col">
             <Header />
             <main className="flex-1">
               {children}
@@ -50,19 +41,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Footer />
           </div>
           
-          {/* Right decorative strip - scrolls with page */}
+          {/* Right decorative strip */}
           <div 
-            className="w-8 md:w-24 flex-shrink-0 md:hidden"
-            style={{
-              backgroundImage: 'url(/images/strip_mobile.jpg)',
-              backgroundSize: '100% auto',
-              backgroundRepeat: 'repeat-y',
-              backgroundPosition: 'top',
-              transform: 'scaleX(-1)'
-            }}
-          />
-          <div 
-            className="w-8 md:w-24 flex-shrink-0 hidden md:block"
+            className="w-24 flex-shrink-0"
             style={{
               backgroundImage: 'url(/images/strip.webp)',
               backgroundSize: '100% auto',
@@ -71,6 +52,41 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               transform: 'scaleX(-1)'
             }}
           />
+        </div>
+
+        {/* Mobile: Strips as overlays */}
+        <div className="md:hidden relative">
+          {/* Left strip overlay */}
+          <div 
+            className="fixed left-0 top-0 bottom-0 w-8 z-40 pointer-events-none"
+            style={{
+              backgroundImage: 'url(/images/strip_mobile.jpg)',
+              backgroundSize: '100% auto',
+              backgroundRepeat: 'repeat-y',
+              backgroundPosition: 'top'
+            }}
+          />
+          
+          {/* Right strip overlay */}
+          <div 
+            className="fixed right-0 top-0 bottom-0 w-8 z-40 pointer-events-none"
+            style={{
+              backgroundImage: 'url(/images/strip_mobile.jpg)',
+              backgroundSize: '100% auto',
+              backgroundRepeat: 'repeat-y',
+              backgroundPosition: 'top',
+              transform: 'scaleX(-1)'
+            }}
+          />
+
+          {/* Main content */}
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <main className="flex-1">
+              {children}
+            </main>
+            <Footer />
+          </div>
         </div>
       </body>
     </html>
