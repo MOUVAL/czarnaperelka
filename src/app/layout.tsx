@@ -20,36 +20,39 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="pl" className={`${inter.className} ${playfair.className}`}>
       <body className="bg-stone-50 text-stone-900">
-        <Header />
-        
-        {/* Left decorative strip - tiled */}
-        <div 
-          className="absolute left-0 top-0 bottom-0 w-16 md:w-24 z-40 pointer-events-none"
-          style={{
-            backgroundImage: 'url(/images/strip.jpg)',
-            backgroundSize: '100% auto',
-            backgroundRepeat: 'repeat-y',
-            backgroundPosition: 'top'
-          }}
-        />
-        
-        {/* Right decorative strip - tiled and mirrored */}
-        <div 
-          className="absolute right-0 top-0 bottom-0 w-16 md:w-24 z-40 pointer-events-none"
-          style={{
-            backgroundImage: 'url(/images/strip.jpg)',
-            backgroundSize: '100% auto',
-            backgroundRepeat: 'repeat-y',
-            backgroundPosition: 'top',
-            transform: 'scaleX(-1)'
-          }}
-        />
-        
-        <div className="ml-16 md:ml-24 mr-16 md:mr-24">
-          {children}
+        <div className="flex min-h-screen">
+          {/* Left decorative strip */}
+          <div 
+            className="w-16 md:w-24 flex-shrink-0 sticky top-0 h-screen"
+            style={{
+              backgroundImage: 'url(/images/strip.jpg)',
+              backgroundSize: '100% auto',
+              backgroundRepeat: 'repeat-y',
+              backgroundPosition: 'top'
+            }}
+          />
+          
+          {/* Main content */}
+          <div className="flex-1 flex flex-col">
+            <Header />
+            <main className="flex-1">
+              {children}
+            </main>
+            <Footer />
+          </div>
+          
+          {/* Right decorative strip */}
+          <div 
+            className="w-16 md:w-24 flex-shrink-0 sticky top-0 h-screen"
+            style={{
+              backgroundImage: 'url(/images/strip.jpg)',
+              backgroundSize: '100% auto',
+              backgroundRepeat: 'repeat-y',
+              backgroundPosition: 'top',
+              transform: 'scaleX(-1)'
+            }}
+          />
         </div>
-        
-        <Footer />
       </body>
     </html>
   );
