@@ -18,7 +18,7 @@ export function Header() {
   return (
     <header 
       className={`text-white fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "shadow-2xl opacity-100" : "opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto"
+        scrolled ? "shadow-2xl opacity-100" : "opacity-0 pointer-events-none"
       }`}
       style={{
         backgroundImage: 'url(/images/menu.webp)',
