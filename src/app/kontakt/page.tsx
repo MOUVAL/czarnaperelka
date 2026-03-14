@@ -6,7 +6,7 @@ export default function ContactPage() {
         Masz pytania o nasze skarby? Napisz do nas.
       </p>
       <div className="bg-stone-100 rounded-lg p-8 text-center">
-        <p className="text-2xl text-amber-600 font-medium mb-4">info@czarnaperelka.com</p>
+        <p className="text-2xl text-amber-600 font-medium mb-4">Djmisniabank@gmail.com</p>
         <p className="text-stone-500">Polska</p>
       </div>
     </div>
