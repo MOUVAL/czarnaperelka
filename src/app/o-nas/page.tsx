@@ -15,59 +15,45 @@ export default function AboutPage() {
           Znajdujemy, gromadzimy i dzielimy się pięknem przeszłości.
         </p>
 
-        <h2 className="font-serif text-2xl font-bold mt-12 mb-4">Dane firmy</h2>
+        <h2 className="font-serif text-2xl font-bold mt-12 mb-4">Kontakt</h2>
         <div className="bg-stone-100 rounded-lg p-6 mb-8">
-          <p className="mb-2"><strong>Nazwa:</strong> Czarna Perła</p>
-          <p className="mb-2"><strong>Adres:</strong> Polska</p>
           <p className="mb-2"><strong>Email:</strong> Djmisniabank@gmail.com</p>
+          <p className="text-stone-500 text-sm">Odpisujemy zazwyczaj w ciągu 24h</p>
         </div>
 
-        <h2 className="font-serif text-2xl font-bold mt-12 mb-4">Polityka prywatności (RODO)</h2>
+        <h2 className="font-serif text-2xl font-bold mt-12 mb-4">Prywatność</h2>
         <div className="text-sm text-stone-600 space-y-4">
           <p>
-            <strong>1. Administrator danych</strong><br />
-            Administratorem danych osobowych jest właściciel sklepu Czarna Perła.
+            Nie zbieramy żadnych danych osobowych bez Twojej wiedzy. 
+            Jeśli do nas napiszesz - odpisujemy i tyle. Nie spamujemy, nie sprzedajemy danych.
           </p>
           
           <p>
-            <strong>2. Cel przetwarzania</strong><br />
-            Dane przetwarzane są wyłącznie w celu obsługi zapytań i realizacji zamówień.
+            Strona używa minimalnych plików cookies żeby działać poprawnie. 
+            Nic nie śledzimy, nie analizujemy.
           </p>
           
           <p>
-            <strong>3. Prawa użytkownika</strong><br />
-            Masz prawo do dostępu, sprostowania, usunięcia lub ograniczenia przetwarzania 
-            swoich danych. Wnioski należy kierować na adres email.
-          </p>
-          
-          <p>
-            <strong>4. Cookies</strong><br />
-            Strona może używać plików cookies w celu zapewnienia prawidłowego działania.
+            Masz pytania o swoje dane? Napisz na email - usuniemy wszystko jeśli chcesz.
           </p>
         </div>
 
-        <h2 className="font-serif text-2xl font-bold mt-12 mb-4">Regulamin</h2>
+        <h2 className="font-serif text-2xl font-bold mt-12 mb-4">Zakupy</h2>
         <div className="text-sm text-stone-600 space-y-4">
           <p>
-            <strong>1. Postanowienia ogólne</strong><br />
-            Czarna Perła prowadzi sprzedaż antyków i przedmiotów kolekcjonerskich.
+            Wszystkie przedmioty są unikalne - każdy jest jedyny w swoim rodzaju. 
+            Sprzedajemy przez email - napisz, dogadamy szczegóły.
           </p>
           
           <p>
-            <strong>2. Zamówienia</strong><br />
-            Zamówienia przyjmowane są przez email. Każdy przedmiot jest unikalny 
-            i dostępny w jednym egzemplarzu.
+            <strong>Zwroty:</strong> Antyki to nie zwykłe zakupy. Jeśli się zastanawiasz - 
+            pytaj przed zakupem. Pokazujemy dokładne zdjęcia, odpowiadamy na pytania. 
+            Zwrot możliwy tylko jeśli przedmiot nie zgadza się z opisem.
           </p>
           
           <p>
-            <strong>3. Dostawa i płatność</strong><br />
-            Szczegóły dostawy i płatności ustalane są indywidualnie przy zamówieniu.
-          </p>
-          
-          <p>
-            <strong>4. Zwroty</strong><br />
-            Zgodnie z polskim prawem, na antyki nie przysługuje prawo odstąpienia 
-            od umowy (art. 38 ustawy o prawach konsumenta).
+            <strong>Dostawa:</strong> Pakujemy starannie, wysyłamy bezpiecznie. 
+            Koszt i sposób dostawy ustalamy indywidualnie.
           </p>
         </div>
       </div>
