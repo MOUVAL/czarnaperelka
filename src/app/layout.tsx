@@ -60,7 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div 
             className="fixed left-0 top-0 bottom-0 w-8 z-40 pointer-events-none"
             style={{
-              backgroundImage: 'url(/images/strip_mobile.jpg)',
+              backgroundImage: 'url(/images/strip_mobile.webp)',
               backgroundSize: '100% auto',
               backgroundRepeat: 'repeat-y',
               backgroundPosition: 'top'
@@ -71,7 +71,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div 
             className="fixed right-0 top-0 bottom-0 w-8 z-40 pointer-events-none"
             style={{
-              backgroundImage: 'url(/images/strip_mobile.jpg)',
+              backgroundImage: 'url(/images/strip_mobile.webp)',
               backgroundSize: '100% auto',
               backgroundRepeat: 'repeat-y',
               backgroundPosition: 'top',

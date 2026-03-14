@@ -45,7 +45,7 @@ export default function Home() {
       <section className="relative w-full h-[120vw] max-h-[90vh] md:h-screen">
         {/* Mobile cover image */}
         <Image
-          src="/images/cover_mobile.jpeg"
+          src="/images/cover_mobile.webp"
           alt="Czarna Perła - statek"
           fill
           className="object-cover md:hidden"
