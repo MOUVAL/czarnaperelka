@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <>
       {/* Full Hero with Boat Image - Full height, centered */}
-      <section className="relative w-full h-screen">
+      <section className="relative w-full h-screen mt-14">
         <Image
           src="/images/boat.webp"
           alt="Czarna Perła - statek"
@@ -52,7 +52,7 @@ export default function Home() {
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-stone-900/50 via-transparent to-stone-900/70" />
-        <div className="absolute inset-0 flex items-center justify-center pt-20">
+        <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center px-6 max-w-4xl">
             <h1 className="font-serif text-6xl md:text-7xl font-bold text-amber-400 mb-8 drop-shadow-2xl">
               Czarna Perła
