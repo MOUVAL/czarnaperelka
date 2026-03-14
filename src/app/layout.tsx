@@ -10,6 +10,9 @@ const playfair = Playfair_Display({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Czarna Perła - Antyki i Kolekcje",
   description: "Antyki i kolekcje z pasją. Porcelana, obrazy, biżuteria.",
+  icons: {
+    icon: "/images/owner.jpg",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
