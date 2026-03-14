@@ -28,10 +28,10 @@ export const metadata: Metadata = {
     siteName: "Czarna Perła",
     images: [
       {
-        url: "/images/boat.webp",
+        url: "/images/owner.webp",
         width: 1200,
         height: 630,
-        alt: "Czarna Perła - statek piracki",
+        alt: "Właściciel Czarnej Perły",
       },
     ],
     locale: "pl_PL",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Czarna Perła - Antyki i Kolekcje",
     description: "Sklep z antykami i kolekcjami. Porcelana, obrazy, biżuteria vintage.",
-    images: ["/images/boat.webp"],
+    images: ["/images/owner.webp"],
   },
   verification: {
     google: "google-site-verification-code",
@@ -55,7 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     name: "Czarna Perła",
     description: "Sklep z antykami i kolekcjami. Porcelana, obrazy, biżuteria vintage.",
     url: "https://czarnaperelka.com",
-    image: "https://czarnaperelka.com/images/boat.webp",
+    image: "https://czarnaperelka.com/images/owner.webp",
     email: "Djmisniabank@gmail.com",
     address: {
       "@type": "PostalAddress",
