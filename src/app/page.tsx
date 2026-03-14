@@ -63,7 +63,6 @@ export default function Home() {
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-stone-900/50 via-transparent to-stone-900/70" />
       </section>
 
       {/* Hero Text - Below image on mobile, overlay on desktop */}
