@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://czarnaperelka.com/sitemap.xml
