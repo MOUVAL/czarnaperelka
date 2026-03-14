@@ -13,6 +13,19 @@ export const metadata: Metadata = {
   icons: {
     icon: "/images/owner.webp",
   },
+  openGraph: {
+    title: "Czarna Perła - Antyki i Kolekcje",
+    description: "Antyki i kolekcje z pasją. Porcelana, obrazy, biżuteria.",
+    images: [
+      {
+        url: "/images/boat.webp",
+        width: 1200,
+        height: 630,
+        alt: "Czarna Perła - statek",
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
