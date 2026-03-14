@@ -20,10 +20,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="pl" className={`${inter.className} ${playfair.className}`}>
       <body className="bg-stone-50 text-stone-900">
-        <div className="flex min-h-screen">
-          {/* Left decorative strip */}
+        <div className="flex">
+          {/* Left decorative strip - scrolls with page */}
           <div 
-            className="w-16 md:w-24 flex-shrink-0 sticky top-0 h-screen"
+            className="w-16 md:w-24 flex-shrink-0"
             style={{
               backgroundImage: 'url(/images/strip.webp)',
               backgroundSize: '100% auto',
@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           />
           
           {/* Main content */}
-          <div className="flex-1 flex flex-col">
+          <div className="flex-1 flex flex-col min-h-screen">
             <Header />
             <main className="flex-1">
               {children}
@@ -41,9 +41,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Footer />
           </div>
           
-          {/* Right decorative strip */}
+          {/* Right decorative strip - scrolls with page */}
           <div 
-            className="w-16 md:w-24 flex-shrink-0 sticky top-0 h-screen"
+            className="w-16 md:w-24 flex-shrink-0"
             style={{
               backgroundImage: 'url(/images/strip.webp)',
               backgroundSize: '100% auto',
