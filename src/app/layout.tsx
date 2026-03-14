@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         
         {/* Left decorative strip */}
-        <div className="fixed left-0 top-0 bottom-0 w-16 md:w-24 z-40 pointer-events-none">
+        <div className="absolute left-0 top-0 bottom-0 w-16 md:w-24 z-40 pointer-events-none">
           <Image
             src="/images/strip.jpg"
             alt=""
@@ -34,7 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </div>
         
         {/* Right decorative strip (mirrored) */}
-        <div className="fixed right-0 top-0 bottom-0 w-16 md:w-24 z-40 pointer-events-none">
+        <div className="absolute right-0 top-0 bottom-0 w-16 md:w-24 z-40 pointer-events-none">
           <Image
             src="/images/strip.jpg"
             alt=""
