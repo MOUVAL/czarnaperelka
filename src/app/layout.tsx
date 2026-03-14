@@ -22,29 +22,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-stone-50 text-stone-900">
         <Header />
         
-        {/* Left decorative strip */}
-        <div className="absolute left-0 top-0 w-16 md:w-24 z-40 pointer-events-none">
-          <Image
-            src="/images/strip.jpg"
-            alt=""
-            width={100}
-            height={600}
-            className="w-full h-auto"
-            sizes="100px"
-          />
-        </div>
+        {/* Left decorative strip - tiled */}
+        <div 
+          className="absolute left-0 top-0 bottom-0 w-16 md:w-24 z-40 pointer-events-none"
+          style={{
+            backgroundImage: 'url(/images/strip.jpg)',
+            backgroundSize: '100% auto',
+            backgroundRepeat: 'repeat-y',
+            backgroundPosition: 'top'
+          }}
+        />
         
-        {/* Right decorative strip (mirrored) */}
-        <div className="absolute right-0 top-0 w-16 md:w-24 z-40 pointer-events-none">
-          <Image
-            src="/images/strip.jpg"
-            alt=""
-            width={100}
-            height={600}
-            className="w-full h-auto scale-x-[-1]"
-            sizes="100px"
-          />
-        </div>
+        {/* Right decorative strip - tiled and mirrored */}
+        <div 
+          className="absolute right-0 top-0 bottom-0 w-16 md:w-24 z-40 pointer-events-none"
+          style={{
+            backgroundImage: 'url(/images/strip.jpg)',
+            backgroundSize: '100% auto',
+            backgroundRepeat: 'repeat-y',
+            backgroundPosition: 'top',
+            transform: 'scaleX(-1)'
+          }}
+        />
         
         <div className="ml-16 md:ml-24 mr-16 md:mr-24">
           {children}
