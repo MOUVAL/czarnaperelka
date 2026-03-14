@@ -42,12 +42,22 @@ export default function Home() {
   return (
     <>
       {/* Full Hero with Boat Image - Full height, centered */}
-      <section className="relative w-screen h-screen -mx-8 md:mx-0 md:w-full">
+      <section className="relative w-screen h-[120vw] max-h-[90vh] -mx-8 md:mx-0 md:w-full md:h-screen">
+        {/* Mobile cover image */}
+        <Image
+          src="/images/cover_mobile.jpeg"
+          alt="Czarna Perła - statek"
+          fill
+          className="object-cover md:hidden"
+          priority
+          sizes="100vw"
+        />
+        {/* Desktop cover image */}
         <Image
           src="/images/boat.webp"
           alt="Czarna Perła - statek"
           fill
-          className="object-contain bg-stone-900"
+          className="object-contain bg-stone-900 hidden md:block"
           priority
           sizes="100vw"
         />
