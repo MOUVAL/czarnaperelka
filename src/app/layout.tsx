@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="flex">
           {/* Left decorative strip - scrolls with page */}
           <div 
-            className="w-16 md:w-24 flex-shrink-0"
+            className="w-8 md:w-24 flex-shrink-0"
             style={{
               backgroundImage: 'url(/images/strip.webp)',
               backgroundSize: '100% auto',
@@ -43,7 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           
           {/* Right decorative strip - scrolls with page */}
           <div 
-            className="w-16 md:w-24 flex-shrink-0"
+            className="w-8 md:w-24 flex-shrink-0"
             style={{
               backgroundImage: 'url(/images/strip.webp)',
               backgroundSize: '100% auto',
