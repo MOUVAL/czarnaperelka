@@ -54,11 +54,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           />
         </div>
 
-        {/* Mobile: Strips as overlays */}
-        <div className="md:hidden relative">
-          {/* Left strip overlay */}
+        {/* Mobile: Strips as flex items pushing content */}
+        <div className="md:hidden flex min-h-screen">
+          {/* Left strip */}
           <div 
-            className="fixed left-0 top-0 bottom-0 w-8 z-40 pointer-events-none"
+            className="w-8 flex-shrink-0"
             style={{
               backgroundImage: 'url(/images/strip_mobile.webp)',
               backgroundSize: '100% auto',
@@ -66,10 +66,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               backgroundPosition: 'top'
             }}
           />
-          
-          {/* Right strip overlay */}
+
+          {/* Main content */}
+          <div className="flex-1 flex flex-col">
+            <Header />
+            <main className="flex-1">
+              {children}
+            </main>
+            <Footer />
+          </div>
+
+          {/* Right strip */}
           <div 
-            className="fixed right-0 top-0 bottom-0 w-8 z-40 pointer-events-none"
+            className="w-8 flex-shrink-0"
             style={{
               backgroundImage: 'url(/images/strip_mobile.webp)',
               backgroundSize: '100% auto',
@@ -78,15 +87,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               transform: 'scaleX(-1)'
             }}
           />
-
-          {/* Main content */}
-          <div className="flex flex-col min-h-screen">
-            <Header />
-            <main className="flex-1">
-              {children}
-            </main>
-            <Footer />
-          </div>
         </div>
       </body>
     </html>
